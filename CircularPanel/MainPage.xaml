@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="CircularPanel.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CircularPanel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="FontWeight" Value="ExtraBold"/>
+        </Style>
+    </Page.Resources>
+    <Grid 
+        Width="700" 
+        Margin="50" 
+        CornerRadius="10" 
+        Background="DeepSkyBlue">
+        <local:Circular Margin="0,0,0,50">
+            <TextBlock Text="1"/>
+            <TextBlock Text="2"/>
+            <TextBlock Text="3"/>
+            <TextBlock Text="4"/>
+            <TextBlock Text="5"/>
+            <TextBlock Text="6"/>
+            <TextBlock Text="7"/>
+            <TextBlock Text="8"/>
+            <TextBlock Text="9"/>
+            <TextBlock Text="10"/>
+            <TextBlock Text="11"/>
+            <TextBlock Text="12"/>
+        </local:Circular>
+    </Grid>
+</Page>
