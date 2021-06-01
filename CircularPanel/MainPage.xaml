@@ -19,6 +19,7 @@
         Margin="50" 
         CornerRadius="10" 
         Background="DeepSkyBlue">
+        <Ellipse Height="650" Width="650" Fill="{ThemeResource SystemAltHighColor}"/>
         <local:Circular Margin="0,0,0,50">
             <TextBlock Text="1"/>
             <TextBlock Text="2"/>
@@ -33,5 +34,23 @@
             <TextBlock Text="11"/>
             <TextBlock Text="12"/>
         </local:Circular>
+        <Canvas Width="650" Height="650">
+            <Rectangle Name="SecondHand" Fill="{ThemeResource SystemBaseHighColor}" Width="2" Height="260" Canvas.Top="75" Canvas.Left="325">
+                <Rectangle.RenderTransform>
+                    <RotateTransform x:Name="SecondHandRotate" Angle="0" CenterX="2" CenterY="255"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle  Name="MinuteHand" Fill="{ThemeResource SystemBaseHighColor}" Width="4" Height="200" Canvas.Top="125" Canvas.Left="325">
+                <Rectangle.RenderTransform>
+                    <RotateTransform x:Name="MinuteHandRotate" Angle="0" CenterX="2" CenterY="200"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle  Name="HourHand" Fill="{ThemeResource SystemBaseHighColor}" Width="8" Height="150" Canvas.Top="175" Canvas.Left="325">
+                <Rectangle.RenderTransform>
+                    <RotateTransform x:Name="HourHandRotate" Angle="0" CenterX="2" CenterY="150"/>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Ellipse Fill="{ThemeResource SystemBaseHighColor}" Width="15" Height="15" Canvas.Left="320" Canvas.Top="320"/>
+        </Canvas>
     </Grid>
 </Page>

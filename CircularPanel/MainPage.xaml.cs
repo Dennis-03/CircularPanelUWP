@@ -22,9 +22,20 @@ namespace CircularPanel
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        DispatcherTimer timer = new DispatcherTimer();
         public MainPage()
         {
             this.InitializeComponent();
+            timer.Interval = TimeSpan.FromMilliseconds(1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, object e)
+        {
+            SecondHandRotate.Angle = (DateTime.Now.Second * 6) + (DateTime.Now.Millisecond * .006);
+            MinuteHandRotate.Angle = (DateTime.Now.Minute * 6) + (DateTime.Now.Second * .10);
+            HourHandRotate.Angle = (DateTime.Now.Hour * 30) + (DateTime.Now.Minute * .2);
         }
     }
     public class Circular : Panel
